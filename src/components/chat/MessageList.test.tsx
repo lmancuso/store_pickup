@@ -41,4 +41,18 @@ describe("MessageList", () => {
     rerender(<MessageList messages={[makeMessage()]} isTyping />);
     expect(screen.getByTestId("typing-indicator")).toBeInTheDocument();
   });
+  it("renderiza el contenido extra de renderMessageExtra debajo de cada burbuja", () => {
+    const messages = [makeMessage({ text: "hola" }), makeMessage({ author: "assistant", text: "menú" })];
+    render(
+      <MessageList
+        messages={messages}
+        renderMessageExtra={(message, index) =>
+          message.author === "assistant" ? <div data-testid="extra">{`extra ${index}`}</div> : null
+        }
+      />,
+    );
+    const items = screen.getAllByRole("listitem");
+    expect(within(items[0]).queryByTestId("extra")).not.toBeInTheDocument();
+    expect(within(items[1]).getByTestId("extra")).toHaveTextContent("extra 1");
+  });
 });

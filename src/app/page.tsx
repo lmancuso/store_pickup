@@ -1,8 +1,13 @@
+import { Suspense } from "react";
+import { AppFallback } from "@/components/app/AppFallback";
+import { StorePickupApp } from "@/components/StorePickupApp";
+
 export default function Home() {
   return (
-    <main className="flex flex-1 flex-col items-center justify-center gap-2 p-6 text-center">
-      <h1 className="text-3xl font-bold">Store Pickup</h1>
-      <p className="text-base opacity-80">Pedí comida conversando y retirala en el local.</p>
-    </main>
+    // El estado inicial del chat usa la hora actual: se renderiza por request
+    // (streaming) y el shell estático queda prerenderizado.
+    <Suspense fallback={<AppFallback />}>
+      <StorePickupApp />
+    </Suspense>
   );
 }
