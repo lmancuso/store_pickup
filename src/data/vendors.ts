@@ -1,0 +1,242 @@
+import type { Vendor } from "@/types";
+
+/**
+ * Vendedores mock en CABA. Nombres inventados; direcciones y coordenadas
+ * aproximadas. Precios en ARS.
+ */
+export const VENDORS: Vendor[] = [
+  // ---------- Pizza ----------
+  {
+    id: "pizza-la-esquina-del-horno",
+    name: "La Esquina del Horno",
+    category: "pizza",
+    address: "Av. Corrientes 1350, San Nicolás",
+    location: { lat: -34.6042, lng: -58.3866 },
+    isOpen: true,
+    prepTimeMinutes: 20,
+    menu: [
+      { id: "pizza-horno-muzza", name: "Pizza de muzzarella", description: "Grande, 8 porciones, muzzarella y aceitunas.", price: 12500 },
+      { id: "pizza-horno-napo", name: "Pizza napolitana", description: "Muzzarella, tomate en rodajas y ajo.", price: 14200 },
+      { id: "pizza-horno-fugazzeta", name: "Fugazzeta rellena", description: "Doble masa rellena de muzzarella con cebolla.", price: 15800 },
+      { id: "pizza-horno-faina", name: "Fainá", description: "Porción de fainá de garbanzo.", price: 1800 },
+    ],
+  },
+  {
+    id: "pizza-don-tano",
+    name: "Pizzería Don Tano",
+    category: "pizza",
+    address: "Av. Rivadavia 3820, Almagro",
+    location: { lat: -34.6107, lng: -58.4196 },
+    isOpen: true,
+    prepTimeMinutes: 25,
+    menu: [
+      { id: "pizza-tano-muzza", name: "Pizza de muzzarella", description: "Grande, a la piedra.", price: 11900 },
+      { id: "pizza-tano-calabresa", name: "Pizza calabresa", description: "Muzzarella y longaniza calabresa.", price: 14900 },
+      { id: "pizza-tano-jamon", name: "Pizza de jamón y morrones", description: "Muzzarella, jamón cocido y morrones asados.", price: 15200 },
+      { id: "pizza-tano-porcion", name: "Porción de muzzarella", description: "Una porción al corte.", price: 2300 },
+    ],
+  },
+  {
+    id: "pizza-masa-madre-palermo",
+    name: "Masa Madre Palermo",
+    category: "pizza",
+    address: "Honduras 4900, Palermo",
+    location: { lat: -34.5888, lng: -58.4301 },
+    isOpen: false,
+    prepTimeMinutes: 30,
+    menu: [
+      { id: "pizza-mm-margherita", name: "Margherita", description: "Tomate, fior di latte y albahaca.", price: 13500 },
+      { id: "pizza-mm-pepperoni", name: "Pepperoni", description: "Salsa de tomate, muzzarella y pepperoni.", price: 15500 },
+      { id: "pizza-mm-cuatro-quesos", name: "Cuatro quesos", description: "Muzzarella, provolone, azul y parmesano.", price: 16200 },
+      { id: "pizza-mm-burrata", name: "Pizza con burrata", description: "Tomates confitados y burrata entera.", price: 18900 },
+    ],
+  },
+
+  // ---------- Empanadas ----------
+  {
+    id: "emp-el-repulgue",
+    name: "El Repulgue",
+    category: "empanadas",
+    address: "Av. Belgrano 1150, Monserrat",
+    location: { lat: -34.6131, lng: -58.3846 },
+    isOpen: true,
+    prepTimeMinutes: 15,
+    menu: [
+      { id: "emp-repulgue-carne", name: "Empanada de carne cortada a cuchillo", description: "Carne, cebolla, huevo y aceituna.", price: 1600 },
+      { id: "emp-repulgue-jyq", name: "Empanada de jamón y queso", description: "Jamón cocido y muzzarella.", price: 1500 },
+      { id: "emp-repulgue-humita", name: "Empanada de humita", description: "Choclo cremoso con salsa blanca.", price: 1500 },
+      { id: "emp-repulgue-docena", name: "Docena surtida", description: "12 empanadas a elección.", price: 17000 },
+    ],
+  },
+  {
+    id: "emp-la-saltenita",
+    name: "La Salteñita del Barrio",
+    category: "empanadas",
+    address: "Av. Santa Fe 2650, Recoleta",
+    location: { lat: -34.5956, lng: -58.4028 },
+    isOpen: true,
+    prepTimeMinutes: 20,
+    menu: [
+      { id: "emp-saltenita-saltena", name: "Empanada salteña", description: "Carne, papa y morrón, al horno de barro.", price: 1700 },
+      { id: "emp-saltenita-pollo", name: "Empanada de pollo", description: "Pollo desmenuzado con verdeo.", price: 1600 },
+      { id: "emp-saltenita-caprese", name: "Empanada caprese", description: "Tomate, muzzarella y albahaca.", price: 1600 },
+      { id: "emp-saltenita-verdura", name: "Empanada de verdura", description: "Acelga, salsa blanca y queso.", price: 1500 },
+    ],
+  },
+  {
+    id: "emp-tucuman-al-paso",
+    name: "Tucumán al Paso",
+    category: "empanadas",
+    address: "Defensa 950, San Telmo",
+    location: { lat: -34.6196, lng: -58.3717 },
+    isOpen: true,
+    prepTimeMinutes: 18,
+    menu: [
+      { id: "emp-tucuman-carne", name: "Empanada tucumana de carne", description: "Carne de matambre picada a cuchillo.", price: 1800 },
+      { id: "emp-tucuman-queso", name: "Empanada de queso y cebolla", description: "Muzzarella y cebolla caramelizada.", price: 1600 },
+      { id: "emp-tucuman-roquefort", name: "Empanada de roquefort", description: "Queso azul y nuez.", price: 1700 },
+      { id: "emp-tucuman-media", name: "Media docena surtida", description: "6 empanadas a elección.", price: 9500 },
+    ],
+  },
+
+  // ---------- Hamburguesas ----------
+  {
+    id: "burger-la-plancha",
+    name: "La Plancha Burgers",
+    category: "hamburguesas",
+    address: "Av. Callao 420, Balvanera",
+    location: { lat: -34.6045, lng: -58.3923 },
+    isOpen: true,
+    prepTimeMinutes: 15,
+    menu: [
+      { id: "burger-plancha-clasica", name: "Clásica", description: "Medallón 120 g, cheddar, lechuga y tomate.", price: 8900 },
+      { id: "burger-plancha-doble", name: "Doble cheddar", description: "Dos medallones, doble cheddar y panceta.", price: 11500 },
+      { id: "burger-plancha-veggie", name: "Veggie", description: "Medallón de lentejas, rúcula y alioli.", price: 9200 },
+      { id: "burger-plancha-papas", name: "Papas fritas", description: "Porción mediana con sal marina.", price: 4200 },
+    ],
+  },
+  {
+    id: "burger-humo-y-pan",
+    name: "Humo y Pan",
+    category: "hamburguesas",
+    address: "Av. Cabildo 1900, Belgrano",
+    location: { lat: -34.5612, lng: -58.4565 },
+    isOpen: true,
+    prepTimeMinutes: 20,
+    menu: [
+      { id: "burger-humo-smoke", name: "Smoke burger", description: "Medallón ahumado, provoleta y cebolla crispy.", price: 12300 },
+      { id: "burger-humo-bbq", name: "BBQ", description: "Salsa barbacoa, panceta y cheddar.", price: 11800 },
+      { id: "burger-humo-pollo", name: "Crispy chicken", description: "Pollo rebozado, coleslaw y pepinos.", price: 10900 },
+      { id: "burger-humo-aros", name: "Aros de cebolla", description: "Porción de 8 aros rebozados.", price: 4800 },
+    ],
+  },
+  {
+    id: "burger-medallon-sur",
+    name: "Medallón del Sur",
+    category: "hamburguesas",
+    address: "Av. Caseros 3100, Parque Patricios",
+    location: { lat: -34.6362, lng: -58.4021 },
+    isOpen: true,
+    prepTimeMinutes: 18,
+    menu: [
+      { id: "burger-sur-simple", name: "Simple", description: "Medallón 150 g, queso tybo y ketchup.", price: 7800 },
+      { id: "burger-sur-completa", name: "Completa", description: "Jamón, queso, huevo frito, lechuga y tomate.", price: 10400 },
+      { id: "burger-sur-triple", name: "Triple", description: "Tres medallones y triple cheddar.", price: 13900 },
+      { id: "burger-sur-nuggets", name: "Nuggets", description: "8 nuggets de pollo con salsa a elección.", price: 5600 },
+    ],
+  },
+
+  // ---------- Sushi ----------
+  {
+    id: "sushi-nikko-roll",
+    name: "Nikko Roll",
+    category: "sushi",
+    address: "Av. Pueyrredón 1700, Recoleta",
+    location: { lat: -34.5936, lng: -58.3998 },
+    isOpen: true,
+    prepTimeMinutes: 30,
+    menu: [
+      { id: "sushi-nikko-combo15", name: "Combo 15 piezas", description: "Rolls variados, niguiris y sashimi.", price: 18500 },
+      { id: "sushi-nikko-phila", name: "Philadelphia roll", description: "8 piezas de salmón y queso crema.", price: 9800 },
+      { id: "sushi-nikko-tempura", name: "Tempura roll", description: "8 piezas de langostino tempura.", price: 10500 },
+      { id: "sushi-nikko-gyozas", name: "Gyozas", description: "5 empanaditas de cerdo a la plancha.", price: 6200 },
+    ],
+  },
+  {
+    id: "sushi-kaze",
+    name: "Kaze Sushi Bar",
+    category: "sushi",
+    address: "Av. Juramento 2200, Belgrano",
+    location: { lat: -34.5627, lng: -58.4564 },
+    isOpen: true,
+    prepTimeMinutes: 35,
+    menu: [
+      { id: "sushi-kaze-combo30", name: "Combo 30 piezas", description: "Para compartir, rolls y niguiris.", price: 32000 },
+      { id: "sushi-kaze-salmon-roll", name: "New York roll", description: "8 piezas de salmón y palta.", price: 9900 },
+      { id: "sushi-kaze-niguiri", name: "Niguiri de salmón", description: "4 piezas.", price: 7400 },
+      { id: "sushi-kaze-veggie", name: "Veggie roll", description: "8 piezas de palta, pepino y zanahoria.", price: 7800 },
+    ],
+  },
+  {
+    id: "sushi-ola-de-mar",
+    name: "Ola de Mar",
+    category: "sushi",
+    address: "Av. Juan de Garay 900, San Telmo",
+    location: { lat: -34.6244, lng: -58.3755 },
+    isOpen: false,
+    prepTimeMinutes: 30,
+    menu: [
+      { id: "sushi-ola-combo20", name: "Combo 20 piezas", description: "Selección del chef.", price: 23500 },
+      { id: "sushi-ola-sashimi", name: "Sashimi de salmón", description: "6 cortes.", price: 9200 },
+      { id: "sushi-ola-ceviche", name: "Ceviche", description: "Pescado blanco, lima, cebolla morada y ají.", price: 11000 },
+      { id: "sushi-ola-hot", name: "Hot roll", description: "8 piezas rebozadas de salmón y queso.", price: 10200 },
+    ],
+  },
+
+  // ---------- Helado ----------
+  {
+    id: "helado-cremino",
+    name: "Heladería Cremino",
+    category: "helado",
+    address: "Av. de Mayo 800, Monserrat",
+    location: { lat: -34.6088, lng: -58.3787 },
+    isOpen: true,
+    prepTimeMinutes: 5,
+    menu: [
+      { id: "helado-cremino-cuarto", name: "1/4 kg", description: "Hasta 3 gustos.", price: 6500 },
+      { id: "helado-cremino-medio", name: "1/2 kg", description: "Hasta 4 gustos.", price: 11500 },
+      { id: "helado-cremino-kilo", name: "1 kg", description: "Hasta 4 gustos.", price: 20000 },
+      { id: "helado-cremino-cucurucho", name: "Cucurucho", description: "2 gustos con baño de chocolate opcional.", price: 4200 },
+    ],
+  },
+  {
+    id: "helado-polo-sur",
+    name: "Polo Sur Helados",
+    category: "helado",
+    address: "Av. Scalabrini Ortiz 1500, Palermo",
+    location: { lat: -34.5911, lng: -58.4256 },
+    isOpen: true,
+    prepTimeMinutes: 5,
+    menu: [
+      { id: "helado-polo-cuarto", name: "1/4 kg", description: "Hasta 3 gustos.", price: 6800 },
+      { id: "helado-polo-medio", name: "1/2 kg", description: "Hasta 4 gustos.", price: 12000 },
+      { id: "helado-polo-kilo", name: "1 kg", description: "Hasta 4 gustos.", price: 21000 },
+      { id: "helado-polo-palito", name: "Palito bombón", description: "Helado de crema bañado en chocolate.", price: 2500 },
+    ],
+  },
+  {
+    id: "helado-dulce-de-leche-y-co",
+    name: "Dulce de Leche & Co.",
+    category: "helado",
+    address: "Av. Rivadavia 6300, Caballito",
+    location: { lat: -34.6280, lng: -58.4510 },
+    isOpen: true,
+    prepTimeMinutes: 5,
+    menu: [
+      { id: "helado-ddl-cuarto", name: "1/4 kg", description: "Hasta 3 gustos.", price: 6200 },
+      { id: "helado-ddl-medio", name: "1/2 kg", description: "Hasta 4 gustos.", price: 11000 },
+      { id: "helado-ddl-kilo", name: "1 kg", description: "Hasta 4 gustos.", price: 19500 },
+      { id: "helado-ddl-sundae", name: "Sundae", description: "Helado, salsa de dulce de leche y nueces.", price: 5400 },
+    ],
+  },
+];
