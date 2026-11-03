@@ -46,6 +46,7 @@ export function ChatInput({ onSend, disabled = false, placeholder = "Escribí un
         disabled={disabled}
         placeholder={placeholder}
         aria-label="Mensaje"
+        data-testid="chat-input"
         autoComplete="off"
         enterKeyHint="send"
         className="min-w-0 flex-1 rounded-full border border-slate-300 bg-white px-4 py-2 text-base text-slate-900 placeholder:text-slate-500 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200 disabled:opacity-60"
@@ -54,6 +55,7 @@ export function ChatInput({ onSend, disabled = false, placeholder = "Escribí un
         type="submit"
         disabled={!canSend}
         aria-label="Enviar"
+        data-testid="chat-send"
         className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-indigo-600 text-white transition-colors hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 disabled:cursor-not-allowed disabled:bg-slate-300"
       >
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true">

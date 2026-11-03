@@ -93,6 +93,7 @@ export function CartSummary({ cart, onIncrement, onDecrement, onConfirm, disable
             if (!empty && !disabled) onConfirm();
           }}
           disabled={empty || disabled}
+          data-testid="cart-confirm"
           className="shrink-0 rounded-full bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 disabled:cursor-not-allowed disabled:bg-slate-300"
         >
           Confirmar pedido

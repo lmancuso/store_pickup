@@ -73,6 +73,7 @@ export function MenuCard({ vendor, distanceKm, etaMinutes, onAdd, disabled = fal
               onClick={() => onAdd(item.id)}
               disabled={disabled}
               aria-label={`Agregar ${item.name}`}
+              data-testid="menu-item-add"
               className="shrink-0 rounded-full bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white transition-colors hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 disabled:cursor-not-allowed disabled:bg-slate-300"
             >
               Agregar
